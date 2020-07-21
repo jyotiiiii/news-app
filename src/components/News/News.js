@@ -28,7 +28,7 @@ function News() {
     // }
 
     const renderItems = () =>
-        news.map((item) => <NewSingle key={item.id} item={item} />)
+        news.map((item) => <NewSingle key={item.url} item={item} />)
 
     return (
         <ul>
