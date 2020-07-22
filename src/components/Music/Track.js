@@ -1,9 +1,9 @@
 import React from 'react';
 
-const NewSingle = ({ item }) => (
+const Track = ({ item }) => (
     <li>
         <p>{item.title}</p>
     </li>
 );
 
-export default NewSingle;
+export default Track;

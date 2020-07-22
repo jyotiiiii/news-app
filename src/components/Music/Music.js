@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import NewSingle from './NewSingle';
+import Track from './Track';
 
 function News() {
-    const [news, setNews] = useState([]);
+    const [music, setMusic] = useState([]);
 
     useEffect(() => {
-        const url = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=40943d695f454e3f8c3492928a561f21';
+        const url = 'https://openwhyd.org/hot/electro?format=json';
 
         fetch(url).then((response) => {
-            return response.json();
+            return response.json()
         }).then((data) => {
-            setNews(data.articles);
+
+            setMusic(data.tracks);
         })
             .catch((error) => console.error(error));
     }, [])
@@ -28,7 +29,7 @@ function News() {
     // }
 
     const renderItems = () =>
-        news.map((item) => <NewSingle key={item.url} item={item} />)
+        music.map((item) => <Track key={item.uId} item={item} />)
 
     return (
         <ul>

@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import News from './News/News';
+import Music from './Music/Music';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        My feed
+        My music
       </header>
-      <News />
+      <Music />
     </div>
   );
 }
