@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Track from './Track';
 
-function News() {
+function Music() {
     const [music, setMusic] = useState([]);
 
     useEffect(() => {
@@ -38,5 +38,5 @@ function News() {
     );
 }
 
-export default News;
+export default Music;
 
